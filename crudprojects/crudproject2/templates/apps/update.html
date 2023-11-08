@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<center>
+<body>
+<h2 style="color: red"> UPDATE PRODUCT INFORMATION</h2>
+<form method="POST" style="color:blue">
+	{%csrf_token%}
+	PRODUCT NO: <input type="text" name="NO" value="{{p.pno}}"><br>
+	PRODUCT NAME: <input type="text" name="name" value="{{p.name}}"><br>
+	PRODUCT PRICE: <input type="text" name="price" value="{{p.price}}"><br>
+	PRODUCT WARENTY: <input type="text" name="warenty" value="{{p.warenty}}"><br>
+
+	<input type="submit" value="UPDATE RECORD">
+</form>
+</body>
+</center>
+</html>

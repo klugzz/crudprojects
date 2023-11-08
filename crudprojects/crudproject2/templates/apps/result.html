@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	table{
+		border-color: white;}
+	th{
+		color:blue;
+	    border-color: white;}</style>
+<center>
+<body>
+<h2 style="text-align: center;color:red">PRODUCT LISTS</h2>
+<table border='2'>
+<thead>
+	<th>Product No</th>
+	<th>Product Name</th>
+	<th>Product Price</th>
+	<th>Product Warenty</th>
+	<th>Actions</th>
+</thead>
+{%for i in p%}
+<tr>
+	<td>{{i.pno}}</td>
+	<td>{{i.name}}</td>
+	<td>{{i.price}}</td>
+	<td>{{i.warenty}}</td>
+	<td><a href="/update/{{ i.id }}">Update</a> | <a href="/delete/{{i.id}}">Delete</a></td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</center>
+
+</html>
